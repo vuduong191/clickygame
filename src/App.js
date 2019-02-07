@@ -4,6 +4,7 @@ import Container from "./components/Container";
 import GridContainer from "./components/GridContainer";
 import PicCard from "./components/PicCard";
 import cards from "./cards.json";
+import * as Animatable from 'react-native-animatable';
 
 class App extends Component {
   // Setting this.state.cards to the cards json array
@@ -27,7 +28,7 @@ class App extends Component {
     this.setState({cards:newcards, score:0})
   }
   // Set random order of the list when the component mounts
-  componentDidMount() {
+  componentDidMount() {   
     let orderListRandom = cards.slice()
     for (let i = orderListRandom.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));

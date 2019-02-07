@@ -4,16 +4,16 @@ import "./style.css";
 function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <span>This is Score: {props.score}</span>
-          </li>
-          <li className="nav-item active">
-            <span>This is Top Score: {props.topScore}</span>
-          </li>        
-        </ul>        
-      </nav>
+      <div className="button-container">
+        <div className="btn">
+          <small>Your Score</small>
+          <p>{props.score}</p>          
+        </div>
+        <div className="btn">
+          <small>Top Score</small>
+          <p>{props.topScore}</p>          
+        </div>
+      </div>      
       <div className="jumbotron jumbotron-fluid">
         <div className="overlay">
         </div>
