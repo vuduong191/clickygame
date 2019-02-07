@@ -1,15 +1,16 @@
 import React from "react";
 import "./style.css";
-function Navbar() {
+
+function Navbar(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="/savedarticles">Saved Articles<span className="sr-only">(current)</span></a>
+            <span>This is Score: {props.score}</span>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" href="/savedarticles">Saved Articles<span className="sr-only">(current)</span></a>
+            <span>This is Top Score: {props.topScore}</span>
           </li>        
         </ul>        
       </nav>
